@@ -1,0 +1,462 @@
+:root{
+    --white: #F4F4F4;
+    --pink: #dbb3a7;
+    --pink-light: #F7DACA;
+    --pink-white: #FCF3EE;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    height: 100vh;
+    background-image: url("images/15176563_sin-mei-nathu-twitter-.jpg");
+    background-position: top;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+/* menu-desktop */
+.menu-desktop{
+    height: 100vh;
+}
+
+.menu-desktop nav{
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    box-sizing: border-box;
+    padding: 30px;
+    transition: all 1s ease;
+    z-index: 100;
+}
+
+.menu-desktop h2{
+    display: none;
+}
+
+.menu-desktop ul{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-desktop li{
+    margin-right: 20px;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.menu-desktop nav.active{
+    top: 0;
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15vh; 
+}
+
+.menu-desktop nav.active h2{
+    display: inline;
+    margin-bottom: inherit;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.menu-mobile{
+    display: none;
+}
+
+/* RESEAUX SOCIAUX */
+.rs{
+    position: fixed;
+    top: 35%;
+    right: 0;
+    height: 90px;
+    width: 30px;
+    background-color: var(--pink);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rs img{
+    height: 20px;
+}
+
+
+/* SECTION ABOUT */
+.about{
+    height: fit-content;
+    background-color: var(--pink-light);
+    box-sizing: border-box;
+    padding: 10vh 5vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 17% 30% 25%;
+    column-gap: 5%;
+}
+
+.text-about{
+    height: 80%;
+    color: #505050;
+}
+
+.text-about h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.text-about p{
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.text-about a{
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.btn-about{
+    color: #505050;
+}
+
+/* SECTION JEWEL */
+.jewel{
+    display: grid;
+    grid-template-columns: 57% 40%;
+    column-gap: 3%;
+    height: fit-content;
+    background-color: var(--pink-white);
+}
+
+.jewel .container{
+    position: relative;
+}
+
+.jewel .img-3{
+    width: 100%;
+    height: 100%;
+}
+
+.jewel .over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.point{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.point::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    animation: point 1s ease infinite;
+}
+
+.point.active{
+    animation: inherit;
+}
+
+
+.point1{
+    top: 52%;
+    left: 12%;
+}
+ 
+.point2{
+    top: 33%;
+    left: 35%;
+}
+ 
+.point3{
+    top: 66%;
+    left: 40%;
+}
+ 
+.point4{
+    top: 48%;
+    left: 65%;
+}
+ 
+.point5{
+    top: 50%;
+    left: 85%;
+}
+ 
+@keyframes point{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
+.description{
+    display: none;
+}
+
+.description.active{
+    display: block;
+    color: #505050;
+}
+
+.description.active h3{
+    margin-top: 80px;
+    font-size: 24px;
+}
+
+.description.active img{
+    margin-top: 30px;
+    width: 30%;
+}
+
+.description.active p{
+    margin-top: 30px;
+    width: 90%;
+}
+
+.description.active .btn-voir-plus{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--pink);
+}
+
+footer{
+    height: 100px;
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+@media(max-width: 1150px){
+
+    .text-about p{
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media(max-width: 768px){
+    header{
+        background-image: url("images/pexels-cottonbro-9431872.jpg");
+        background-position: center;
+        padding: 0;
+    }
+    .menu-desktop{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+        height: 100vh;
+    }
+
+    /* .logo-mobile{
+        font-size: 2rem;
+        text-align: center;
+        color: var(--white);
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%);
+    } */
+
+    .icon-menu{
+        display: block;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        width: 30px;
+        height: 30px;
+        z-index: 130;
+        background-image: url("images/icon-menu.svg");
+        background-size: cover;
+        background-position: center;
+        transition: all 1s ease;
+    }
+    
+    .icon-menu.icon-cross{
+        background-image: url("images/icon-cross.svg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .flou{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+
+    .rs{
+        display: none;
+    }
+
+    .nav-mobile{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        min-width: 250px;
+        height: 100vh;
+        background-color: var(--pink-white);
+        z-index: 120;
+    }
+
+    .nav-mobile ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+
+    .nav-mobile li{
+        margin-bottom: 20px;
+    }
+
+    .nav-mobile a{
+        color: #505050;
+        font-size: 18px;
+    }
+
+    h1{
+        padding-top: 30px;
+    }
+    .nav-mobile.active{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        min-width: 250px;
+        height: 100vh;
+        background-color: var(--pink-white);
+    }
+    
+
+    .about{
+        display: flex;
+        flex-direction: row-reverse;
+        padding:10px;
+    }
+
+    .about .img-1{
+        display: none;
+    }
+    .about .img-2{
+        width: 50%;
+    }
+    .jewel{
+        display: block;
+        height: fit-content;
+    }
+    
+    .jewel .img-3{
+        width: 100%;
+    }
+
+    .jewel .container{
+        display: none;
+    }
+
+    .jewel .descriptions{
+        display: flex;
+        align-items: center;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .jewel .descriptions::-webkit-scrollbar{
+        display: none;
+    }
+
+    .description{
+        display: block;
+        margin: none;
+        width: 90vw;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: var(--pink-white);
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        scroll-snap-type: x proximity;
+    }
+
+    .description h3, .description.active h3{
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .description img, .description.active img{
+        margin-top: 30px;
+        width: 30%;
+    }
+    
+    .description p, .description.active p{
+        margin-top: 30px;
+        width: 90%;
+    }
+
+    .description .btn-voir-plus, .description.active .btn-voir-plus{
+        margin-top: 30px;
+        display: inline-block;
+        padding: 14px 25px;
+        border-radius: 8px;
+        font-size: 16px;
+        background-color: var(--pink);
+    }
+}
